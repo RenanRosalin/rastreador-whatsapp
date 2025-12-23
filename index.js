@@ -40,7 +40,7 @@ app.get('/r', (req, res) => {
     // Nota: Tirei o código do texto visível para testarmos a "Janela de Tempo", 
     // mas você pode adicionar se quiser.
 
-    const linkZap = `https://wa.me/${MEU_NUMERO_WHATSAPP}?text=${encodeURIComponent(mensagem)}`;
+    const linkZap = `https://api.whatsapp.com/send?phone=${MEU_NUMERO_WHATSAPP}&text=${encodeURIComponent(mensagem)}`;
     res.redirect(linkZap);
 });
 
@@ -119,4 +119,5 @@ app.post('/webhook', (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => console.log(`🚀 Servidor rodando na porta ${PORT}`));

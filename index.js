@@ -32,11 +32,12 @@ try {
 // Memória RAM
 let cliquesPendentes = []; 
 
-// --- ROTA 1: Link do Anúncio ---
+// --- ROTA 1: Link do Anúncio (Sem Mensagem) ---
 app.get('/r', (req, res) => {
     const { origem, campanha } = req.query;
-    console.log(`🖱️ CLIQUE RECEBIDO: Origem=${origem}, Campanha=${campanha}`); // <--- AGORA VAI AVISAR
+    console.log(`🖱️ CLIQUE RECEBIDO: Origem=${origem}, Campanha=${campanha}`);
     
+    // Registra o clique na memória
     const novoClique = {
         id: Date.now().toString(36),
         timestamp: Date.now(),
@@ -44,6 +45,16 @@ app.get('/r', (req, res) => {
         campanha: campanha || 'geral',
         usado: false
     };
+
+    cliquesPendentes.push(novoClique);
+    if (cliquesPendentes.length > 100) cliquesPendentes.shift();
+
+    // --- AQUI ESTÁ A MUDANÇA ---
+    // O link termina logo depois do número. Não tem mais "&text="
+    const linkZap = `https://api.whatsapp.com/send?phone=${MEU_NUMERO_WHATSAPP}`;
+    
+    res.redirect(linkZap);
+});
 
     cliquesPendentes.push(novoClique);
     // Limpeza (mantém últimos 100 cliques para não lotar memória)
@@ -147,3 +158,4 @@ app.get('/dashboard', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 SERVIDOR "TAGARELA" RODANDO NA PORTA ${PORT}`));
+

@@ -128,8 +128,7 @@ app.get('/api/leads', async (req, res) => {
 // --- ROTA 4: DASHBOARD DARK MODE (Estilo DataBox - Corrigido) ---
 app.get('/dashboard', (req, res) => {
     // URL do seu logotipo
-    const LOGO_URL = "https://wp.danielrosalinturismo.com.br/wp-content/uploads/2025/12/Logo-fundo-transparente-Branco-borda-mais-reduzida.png
-"; 
+    const LOGO_URL = "https://wp.danielrosalinturismo.com.br/wp-content/uploads/2025/12/Logo-fundo-transparente-Branco-borda-mais-reduzida.png"; 
 
     res.send(`
     <!DOCTYPE html>
@@ -348,6 +347,7 @@ app.get('/dashboard', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 SERVIDOR COMPLETO RODANDO NA PORTA ${PORT}`));
+
 
 
 

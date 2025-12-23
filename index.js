@@ -167,7 +167,7 @@ app.get('/dashboard', (req, res) => {
                 border-bottom: 1px solid var(--border-subtle); 
                 padding: 15px 0; 
             }
-            .brand-logo { height: 40px; margin-right: 15px; filter: brightness(1.2); }
+            .brand-logo { height: 70px; margin-right: 15px; filter: brightness(1.2); }
             .brand-text { font-weight: 700; font-size: 1.3rem; color: var(--text-bright); letter-spacing: 0.5px; }
             .btn-refresh { 
                 background-color: rgba(32, 201, 151, 0.15); 
@@ -444,6 +444,7 @@ app.get('/dashboard', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 SERVIDOR COMPLETO RODANDO NA PORTA ${PORT}`));
+
 
 
 

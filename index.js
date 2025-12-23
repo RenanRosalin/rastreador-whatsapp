@@ -1,4 +1,4 @@
- const express = require('express');
+const express = require('express');
 const bodyParser = require('body-parser');
 const { google } = require('googleapis');
 
@@ -347,6 +347,7 @@ app.get('/dashboard', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 SERVIDOR COMPLETO RODANDO NA PORTA ${PORT}`));
+
 
 
 

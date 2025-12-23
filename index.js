@@ -243,7 +243,7 @@ app.get('/dashboard', (req, res) => {
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="#">
                     <img src="${LOGO_URL}" alt="Logo" class="brand-logo">
-                    <span class="brand-text text-uppercase">RASTREADOR | ROSALIN TURISMO</span>
+                    <span class="brand-text text-uppercase">RASTREADOR DE LEADS</span>
                 </a>
                 <button onclick="carregar()" class="btn btn-refresh btn-sm">
                     <i class="fas fa-sync-alt me-2"></i> Atualizar Dados
@@ -444,6 +444,7 @@ app.get('/dashboard', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 SERVIDOR COMPLETO RODANDO NA PORTA ${PORT}`));
+
 
 
 

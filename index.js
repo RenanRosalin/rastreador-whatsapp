@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // --- CONFIGURAÇÃO ---
 const MEU_NUMERO_WHATSAPP = '5514997132879'; 
-const TEMPO_JANELA_MS = 300000; // 5 minutos
+const TEMPO_JANELA_MS = 60000; // 1 minutos
 
 // --- CONEXÃO GOOGLE SHEETS ---
 console.log("🔄 Conectando Google Sheets...");
@@ -375,6 +375,7 @@ app.get('/dashboard', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 SERVIDOR COMPLETO RODANDO NA PORTA ${PORT}`));
+
 
 
 

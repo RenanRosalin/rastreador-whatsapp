@@ -51,11 +51,35 @@ app.get('/', (req, res) => {
     `);
 });
 
-// --- ROTA 1: Rastreador (SEM MENSAGEM) ---
+// --- ROTA 1: Link do Anúncio (Com Mensagens Personalizadas) ---
 app.get('/r', (req, res) => {
     const { origem, campanha } = req.query;
     console.log(`🖱️ CLIQUE: ${origem} | ${campanha}`);
     
+    // --- 📢 CONFIGURE SUAS MENSAGENS AQUI ---
+    const mensagens = {
+        'LANDINGPAGE-GRUPO-BUENOS-AIRES-04-2026': 'Olá! Vi a página do grupo de Buenos Aires para abril com os bônus e gostaria de saber os valores para (  ) pessoas.',
+        'LANDINGPAGE-GRUPO-NATAL-04-2026': 'Olá! Vi a página do grupo de Natal para abril com os bônus e tenho interesse.',
+        'LANDINGPAGE-GRUPO-PORTO-SEGURO-03-2026': 'Olá! Vi a página do grupo de Porto Seguro para março com os bônus e tenho interesse.',
+        'LANDINGPAGE-GRUPO-PORTO-SEGURO-07-2026': 'Olá! Vi a página do grupo de Porto Seguro para julho com os bônus e tenho interesse.',
+        'LANDINGPAGE-GRUPO-VIVA-05-2026': 'Olá! Vi a página do grupo para o Vivá Porto de Galinhas para maio com os bônus e tenho interesse.',
+        'LANDINGPAGE-GRUPO-CAM-JORDAO-06-2026': 'Olá! Vi a página do grupo de Campos do Jordão para junho com os bônus e tenho interesse.',
+        'LANDINGPAGE-GRUPO-BARILOCHE-07-2026': 'Olá! Vi a página do grupo de Bariloches para julho com os bônus e tenho interesse.',
+        'LANDINGPAGE-GRUPO-ORLANDO-09-2026': 'Olá! Vi a página do grupo de Orlando Disney para setembro com os bônus e tenho interesse.',
+        'OFERTA-CANAL-VIP': 'Olá! Vi uma oferta para (destino) no canal vip e gostei.',
+        'LINK_BIO_INSTAGRAM': 'Olá, tudo bem? vim pelo Instagram.',
+        'LINK_BIO_FACEBOOK': 'Olá, tudo bem? Eu vim pelo Facebook.'
+    };
+
+    // 1. Tenta pegar a mensagem específica da campanha
+    let textoFinal = mensagens[campanha];
+
+    // 2. Se não tiver mensagem configurada, deixa em branco (ou coloque uma frase padrão)
+    if (!textoFinal) {
+        textoFinal = ''; // Deixa vazio para a pessoa digitar
+    }
+    // -----------------------------------------------------------
+
     const novoClique = {
         id: Date.now().toString(36),
         timestamp: Date.now(),
@@ -67,8 +91,12 @@ app.get('/r', (req, res) => {
     cliquesPendentes.push(novoClique);
     if (cliquesPendentes.length > 100) cliquesPendentes.shift();
 
-    // Link simples, sem o parâmetro &text=
-    const linkZap = `https://api.whatsapp.com/send?phone=${MEU_NUMERO_WHATSAPP}`;
+    // Monta o link. O "encodeURIComponent" arruma os espaços e acentos automaticamente.
+    let linkZap = `https://api.whatsapp.com/send?phone=${MEU_NUMERO_WHATSAPP}`;
+    
+    if (textoFinal) {
+        linkZap += `&text=${encodeURIComponent(textoFinal)}`;
+    }
     
     res.redirect(linkZap);
 });
@@ -347,6 +375,7 @@ app.get('/dashboard', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 SERVIDOR COMPLETO RODANDO NA PORTA ${PORT}`));
+
 
 
 

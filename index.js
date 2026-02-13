@@ -144,7 +144,7 @@ app.get('/api/leads', async (req, res) => {
     try {
         const response = await sheets.spreadsheets.values.get({
             spreadsheetId: SPREADSHEET_ID,
-            range: 'Página1!A2:E200', // Pega até 200 linhas
+            range: 'Página1!A2:E', // O 'E' sem número significa "até o final"
         });
         const rows = response.data.values || [];
         const leads = rows.map(row => ({
@@ -376,6 +376,7 @@ app.get('/dashboard', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 SERVIDOR COMPLETO RODANDO NA PORTA ${PORT}`));
+
 
 
 

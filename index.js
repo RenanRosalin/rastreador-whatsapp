@@ -66,6 +66,11 @@ app.get('/r', (req, res) => {
         'LANDINGPAGE-GRUPO-CAMPOS-06-2026': 'Olá! Vi a página do grupo de Campos do Jordão para junho com os bônus e tenho interesse.',
         'LANDINGPAGE-GRUPO-BARILOCHE-07-2026': 'Olá! Vi a página do grupo de Bariloche para julho com os bônus e tenho interesse.',
         'LANDINGPAGE-GRUPO-ORLANDO-09-2026': 'Olá! Vi a página do grupo de Orlando Disney para setembro com os bônus e tenho interesse.',
+        'LP-GRU-PERU-ABREU-JULHO-2026': 'Oi, vi a página do grupo para o Peru e quero reservar para Julho',
+        'LP-GRU-PERU-ABREU-AGOSTO-2026': 'Oi, vi a página do grupo para o Peru e quero reservar para Agosto',
+        'LP-GRU-PERU-ABREU-SETEMBRO-2026': 'Oi, vi a página do grupo para o Peru e quero reservar para Setembro',
+        'LP-GRU-PERU-ABREU-OUTUBRO-2026': 'Oi, vi a página do grupo para o Peru e quero reservar para Outubro',
+        'LP-GRU-PERU-ABREU-DUVIDAS-2026': 'Oi, vi a página do grupo para o Peru e tenho algumas dúvidas',
         'LANDINGPAGE-GRUPO-ORLANDO-09-2026-REDES-SOCIAIS': 'Olá! Estava nas redes sociais, vi a página do grupo de Orlando Disney para setembro com os bônus e tenho interesse.',
         'OFERTA-CANAL-VIP': 'Olá! Vi uma oferta para (destino) no canal vip e gostei.',
         'LINK_BIO_INSTAGRAM': 'Olá, tudo bem? vim pelo Instagram.',
@@ -376,6 +381,7 @@ app.get('/dashboard', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 SERVIDOR COMPLETO RODANDO NA PORTA ${PORT}`));
+
 
 
 

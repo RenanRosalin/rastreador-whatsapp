@@ -60,7 +60,6 @@ app.get('/r', (req, res) => {
     const mensagens = {
         'LANDINGPAGE-GRUPO-BUENOS-AIRES-04-2026': 'Olá! Vi a página do grupo de Buenos Aires para abril com os bônus e gostaria de saber os valores para (  ) pessoas.',
         'LANDINGPAGE-GRUPO-NATAL-04-2026': 'Olá! Vi a página do grupo de Natal para abril com os bônus e tenho interesse.',
-        'LANDINGPAGE-GRUPO-PORTO-SEGURO-03-2026': 'Olá! Vi a página do grupo de Porto Seguro para março com os bônus e tenho interesse.',
         'LANDINGPAGE-GRUPO-PORTO-SEGURO-07-2026': 'Olá! Vi a página do grupo de Porto Seguro para julho com os bônus e tenho interesse.',
         'LANDINGPAGE-GRUPO-VIVA-05-2026': 'Olá! Vi a página do grupo para o Vivá Porto de Galinhas para maio com os bônus e tenho interesse.',
         'LANDINGPAGE-GRUPO-CAMPOS-06-2026': 'Olá! Vi a página do grupo de Campos do Jordão para junho com os bônus e tenho interesse.',
@@ -71,6 +70,9 @@ app.get('/r', (req, res) => {
         'LP-GRU-PERU-ABREU-SETEMBRO-2026': 'Oi, vi a página do grupo para o Peru e quero reservar para Setembro',
         'LP-GRU-PERU-ABREU-OUTUBRO-2026': 'Oi, vi a página do grupo para o Peru e quero reservar para Outubro',
         'LP-GRU-PERU-ABREU-DUVIDAS-2026': 'Oi, vi a página do grupo para o Peru e tenho algumas dúvidas',
+        'LP-GRU-COSTA-02-2027': 'Oi, vi a página do grupo para o Cruzeiro Costa Diadema no carnaval com a condição exclusiva e quero reservar com todos os bônus e presentes!'
+        'LP-GRU-COSTA-02-2027-PASS': 'Eu fui no grupo de carnaval 2026 no Cruzeiro Costa Diadema e quero garantir minha vaga para o próximo carnaval com todos os bônus e presentess!'
+        'LP-GRU-COSTA-02-2027-CONV': 'Recebi o convite VIP para o carnaval no Cruzeiro Costa Diadema com as condições especiais e quero garantir a minha vaga com todos os presentes e bônus!'
         'LANDINGPAGE-GRUPO-ORLANDO-09-2026-REDES-SOCIAIS': 'Olá! Estava nas redes sociais, vi a página do grupo de Orlando Disney para setembro com os bônus e tenho interesse.',
         'OFERTA-CANAL-VIP': 'Olá! Vi uma oferta para (destino) no canal vip e gostei.',
         'LINK_BIO_INSTAGRAM': 'Olá, tudo bem? vim pelo Instagram.',
@@ -381,6 +383,7 @@ app.get('/dashboard', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 SERVIDOR COMPLETO RODANDO NA PORTA ${PORT}`));
+
 
 
 

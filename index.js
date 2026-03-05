@@ -59,7 +59,6 @@ app.get('/r', (req, res) => {
     // --- 📢 CONFIGURE SUAS MENSAGENS AQUI ---
     const mensagens = {
         'LANDINGPAGE-GRUPO-BUENOS-AIRES-04-2026': 'Olá! Vi a página do grupo de Buenos Aires para abril com os bônus e gostaria de saber os valores para (  ) pessoas.',
-        'LANDINGPAGE-GRUPO-NATAL-04-2026': 'Olá! Vi a página do grupo de Natal para abril com os bônus e tenho interesse.',
         'LANDINGPAGE-GRUPO-PORTO-SEGURO-07-2026': 'Olá! Vi a página do grupo de Porto Seguro para julho com os bônus e tenho interesse.',
         'LANDINGPAGE-GRUPO-VIVA-05-2026': 'Olá! Vi a página do grupo para o Vivá Porto de Galinhas para maio com os bônus e tenho interesse.',
         'LANDINGPAGE-GRUPO-CAMPOS-06-2026': 'Olá! Vi a página do grupo de Campos do Jordão para junho com os bônus e tenho interesse.',
@@ -75,6 +74,8 @@ app.get('/r', (req, res) => {
         'LP-GRU-COSTA-02-2027-CONV': 'Recebi o convite VIP para o carnaval no Cruzeiro Costa Diadema com as condições especiais e quero garantir a minha vaga com todos os presentes e bônus!'
         'LANDINGPAGE-GRUPO-ORLANDO-09-2026-REDES-SOCIAIS': 'Olá! Estava nas redes sociais, vi a página do grupo de Orlando Disney para setembro com os bônus e tenho interesse.',
         'OFERTA-CANAL-VIP': 'Olá! Vi uma oferta para (destino) no canal vip e gostei.',
+        'LP-GRU-CANCUN-2026-VIP': 'Oi, vi a página do grupo para Cancún no grupo VIP com as condições especiais e tenho interesse',
+        'LP-GRU-CANCUN-2026': "Oi, vi a página do grupo para Cancún do anúncio com as condições especiais e tenho interesse',
         'LINK_BIO_INSTAGRAM': 'Olá, tudo bem? vim pelo Instagram.',
         'LINK_BIO_FACEBOOK': 'Olá, tudo bem? Eu vim pelo Facebook.'
     };
@@ -383,6 +384,7 @@ app.get('/dashboard', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 SERVIDOR COMPLETO RODANDO NA PORTA ${PORT}`));
+
 
 
 

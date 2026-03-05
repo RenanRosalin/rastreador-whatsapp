@@ -75,7 +75,7 @@ app.get('/r', (req, res) => {
         'LANDINGPAGE-GRUPO-ORLANDO-09-2026-REDES-SOCIAIS': 'Olá! Estava nas redes sociais, vi a página do grupo de Orlando Disney para setembro com os bônus e tenho interesse.',
         'OFERTA-CANAL-VIP': 'Olá! Vi uma oferta para (destino) no canal vip e gostei.',
         'LP-GRU-CANCUN-2026-VIP': 'Oi, vi a página do grupo para Cancún no grupo VIP com as condições especiais e tenho interesse',
-        'LP-GRU-CANCUN-2026': "Oi, vi a página do grupo para Cancún do anúncio com as condições especiais e tenho interesse',
+        'LP-GRU-CANCUN-2026': 'Oi, vi a página do grupo para Cancún do anúncio com as condições especiais e tenho interesse',
         'LINK_BIO_INSTAGRAM': 'Olá, tudo bem? vim pelo Instagram.',
         'LINK_BIO_FACEBOOK': 'Olá, tudo bem? Eu vim pelo Facebook.'
     };
@@ -384,6 +384,7 @@ app.get('/dashboard', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 SERVIDOR COMPLETO RODANDO NA PORTA ${PORT}`));
+
 
 
 

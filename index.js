@@ -69,7 +69,7 @@ app.get('/r', (req, res) => {
         'LP-GRU-PERU-ABREU-SETEMBRO-2026': 'Oi, vi a página do grupo para o Peru e quero reservar para Setembro',
         'LP-GRU-PERU-ABREU-OUTUBRO-2026': 'Oi, vi a página do grupo para o Peru e quero reservar para Outubro',
         'LP-GRU-PERU-ABREU-DUVIDAS-2026': 'Oi, vi a página do grupo para o Peru e tenho algumas dúvidas',
-        'LP-GRU-COSTA-02-2027': 'Oi, vi a página do grupo para o Cruzeiro Costa Diadema no carnaval com a condição exclusiva e quero reservar com todos os bônus e presentes!',
+        'LP-GRU-COSTA-02-2027': 'Oi, vi a página do grupo para o Cruzeiro Costa Diadema no carnaval com a condição exclusiva e upgrade de cabine e quero reservar!',
         'LP-GRU-COSTA-02-2027-PASS': 'Eu fui no grupo de carnaval 2026 no Cruzeiro Costa Diadema e quero garantir minha vaga para o próximo carnaval com todos os bônus e presentess!',
         'LP-GRU-COSTA-02-2027-CONV': 'Recebi o convite VIP para o carnaval no Cruzeiro Costa Diadema com as condições especiais e quero garantir a minha vaga com todos os presentes e bônus!',
         'LANDINGPAGE-GRUPO-ORLANDO-09-2026-REDES-SOCIAIS': 'Olá! Estava nas redes sociais, vi a página do grupo de Orlando Disney para setembro com os bônus e tenho interesse.',
